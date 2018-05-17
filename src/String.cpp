@@ -31,12 +31,27 @@ int String::indexOf(char c, unsigned int indice) const
     return find(c, indice);
 }
 
-int String::indexOf(const String& str, unsigned int indice) const
+int String::indexOf(const char* c, unsigned int indice) const
+{
+    return find(*c, indice);
+}
+
+int String::indexOf(String const& str, unsigned int indice) const
 {
     return find(str, indice);
 }
-
-String String::operator =(const char[] c)
+//*
+String& String::operator =(std::string const& str)
 {
-    return String(c);
+    String s = String(str);
+    return s;
 }
+//*/
+
+//*
+String& String::operator =(const char* c)
+{
+    String s (c);
+    return s;
+}
+//*/

@@ -15,6 +15,11 @@ String::String(unsigned int n, char c): std::string(n, c)
     //ctor
 }
 
+String::String(const char c[]): std::string(c)
+{
+    //
+}
+
 String::~String()
 {
     //dtor

@@ -11,6 +11,7 @@ class String : public std::string
         String();
         String(const std::string& str);
         String(unsigned int n, char c);
+        String(const char c[]);
 
         // Destructeur
         virtual ~String();
@@ -23,10 +24,6 @@ class String : public std::string
 
         String& operator=(std::string const& str);
         String& operator=(const char c[]);
-
-    protected:
-
-    private:
 };
 
 #endif // STRING_H

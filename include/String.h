@@ -21,6 +21,7 @@ class String : public std::string
         int indexOf(char c, unsigned int indice=0) const;
         int indexOf(const char* c, unsigned int indice=0) const;
         int indexOf(String const& str, unsigned int indice=0) const;
+        String substring(unsigned int debut, unsigned int fin=-1) const;
 
         String& operator=(std::string const& str);
         String& operator=(const char c[]);

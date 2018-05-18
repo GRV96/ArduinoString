@@ -1,23 +1,23 @@
 #include "String.h"
 
-String::String()
+String::String(): std::string()
 {
-    //ctor
+    // Appelle le constructeur de std::string.
 }
 
 String::String(const std::string& str): std::string(str)
 {
-    //
+    // Appelle le constructeur de std::string.
 }
 
 String::String(unsigned int n, char c): std::string(n, c)
 {
-    //ctor
+    // Appelle le constructeur de std::string.
 }
 
 String::String(const char c[]): std::string(c)
 {
-    //
+    // Appelle le constructeur de std::string.
 }
 
 String::~String()
@@ -46,18 +46,20 @@ int String::indexOf(String const& str, unsigned int indice) const
     return find(str, indice);
 }
 
-//*
+String String::substring(unsigned int debut, unsigned int fin) const
+{
+    String s = substr(debut, fin-debut+1);
+    return s;
+}
+
 String& String::operator =(std::string const& str)
 {
     String s = String(str);
     return s;
 }
-//*/
 
-//*
 String& String::operator =(const char c[])
 {
     String s = String(c);
     return s;
 }
-//*/

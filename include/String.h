@@ -22,7 +22,7 @@ class String : public std::string
         int indexOf(String const& str, unsigned int indice=0) const;
 
         String& operator=(std::string const& str);
-        String& operator=(const char* c);
+        String& operator=(const char c[]);
 
     protected:
 

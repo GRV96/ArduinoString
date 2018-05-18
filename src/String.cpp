@@ -40,6 +40,7 @@ int String::indexOf(String const& str, unsigned int indice) const
 {
     return find(str, indice);
 }
+
 //*
 String& String::operator =(std::string const& str)
 {
@@ -49,9 +50,9 @@ String& String::operator =(std::string const& str)
 //*/
 
 //*
-String& String::operator =(const char* c)
+String& String::operator =(const char c[])
 {
-    String s (c);
+    String s = String(c);
     return s;
 }
 //*/

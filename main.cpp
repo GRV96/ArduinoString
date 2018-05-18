@@ -48,7 +48,23 @@ int main()
     s.clear();
     cout << "s.clear(): " << s << "." << endl << endl;
 
-    //* Essai de new avec String
+    //* Essai de new avec String*
+    String* sp = new String("chaine");
+    cout << "Pointeur de String: " << *sp << endl;
+
+    delete sp;
+    cout << "Suppression du pointeur." << endl;
+
+    cout << "Pointeur de String: " << *sp << endl;
+
+    sp = 0;
+    cout << "Mise a zero du pointeur." << endl;
+
+    /* Fait planter le programme.
+    cout << "Pointeur de String: " << *sp << endl;
+    //*/
+
+    /* Essai de new avec vector<String*>
     vector<String*> strvec = vector<String*>();
 
     const int n = 10000000;

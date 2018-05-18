@@ -46,9 +46,9 @@ int main()
 
     // Pas besoin d'implémenter clear. Apparamment, n'existe pas dans Arduino.
     s.clear();
-    cout << "s.clear(): " << s << "." << endl;
+    cout << "s.clear(): " << s << "." << endl << endl;
 
-    /* Essai de new avec String
+    //* Essai de new avec String
     vector<String*> strvec = vector<String*>();
 
     const int n = 10000000;
@@ -60,11 +60,11 @@ int main()
 
     for(unsigned int i=0; i<10; i++)
     {
-        cout << *strvec.at(i) << endl;
+        cout << i << " " << *strvec.at(i) << endl;
     }
 
     String a;
-    cin >> a;
+    cin >> a; // Pour arrêter le programme
 
     // Essai du destructeur
     for(unsigned int i=0; i<n; i++)
@@ -74,10 +74,10 @@ int main()
 
     for(unsigned int i=0; i<10; i++)
     {
-        cout << *strvec.at(i) << endl;
+        cout << i << " " << *strvec.at(i) << endl;
     }
 
-    cin >> a;
+    cin >> a; // Pour arrêter le programme
 
     cout << a << endl;
     //*/

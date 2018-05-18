@@ -33,7 +33,6 @@ int main()
     String ain = s.substring(2, 4);
     String aine = s.substring(2);
 
-    //*
     cout << "Test avec le string " << s << endl;
 
     cout << "Troisieme caractere: " << s.charAt(2) << endl;
@@ -45,11 +44,15 @@ int main()
     cout << "Position de la chaine \"ain\": " << s.indexOf("ain") << endl;
     cout << "Position de la chaine \"ain\": " << s.indexOf(ain) << endl;
 
+    // Pas besoin d'implémenter clear. Apparamment, n'existe pas dans Arduino.
+    s.clear();
+    cout << "s.clear(): " << s << "." << endl;
+
+    /* Essai de new avec String
     vector<String*> strvec = vector<String*>();
 
     const int n = 10000000;
 
-    // Essai de new avec String
     for(unsigned int i=0; i<n; i++)
     {
         strvec.push_back(new String("chaine"));

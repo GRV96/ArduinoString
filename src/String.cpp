@@ -31,6 +31,11 @@ String String::charAt(unsigned int indice) const
     return String(1, c);
 }
 
+int String::compareTo(String const& str) const
+{
+    return compare(str);
+}
+
 int String::indexOf(char c, unsigned int indice) const
 {
     return find(c, indice);

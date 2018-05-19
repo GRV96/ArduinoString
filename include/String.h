@@ -22,6 +22,7 @@ class String : public std::string
         int indexOf(const char* c, unsigned int indice=0) const;
         int indexOf(String const& str, unsigned int indice=0) const;
         void remove(unsigned int debut, unsigned int nbr=npos);
+        unsigned int length() const;
         String substring(unsigned int debut, unsigned int fin=-1) const;
         long int toInt() const;
 

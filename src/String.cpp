@@ -51,6 +51,11 @@ void String::remove(unsigned int debut, unsigned int nbr)
     *this = erase(debut, nbr);
 }
 
+unsigned int String::length() const
+{
+    return size();
+}
+
 String String::substring(unsigned int debut, unsigned int fin) const
 {
     String s = substr(debut, fin-debut+1);

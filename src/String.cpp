@@ -5,7 +5,7 @@ String::String(): std::string()
     // Appelle le constructeur de std::string.
 }
 
-String::String(const std::string& str): std::string(str)
+String::String(std::string const& str): std::string(str)
 {
     // Appelle le constructeur de std::string.
 }
@@ -50,6 +50,11 @@ String String::substring(unsigned int debut, unsigned int fin) const
 {
     String s = substr(debut, fin-debut+1);
     return s;
+}
+
+long int String::toInt() const
+{
+    return std::stoi(*this);
 }
 
 String& String::operator =(std::string const& str)

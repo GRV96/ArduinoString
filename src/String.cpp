@@ -46,6 +46,11 @@ int String::indexOf(String const& str, unsigned int indice) const
     return find(str, indice);
 }
 
+void String::remove(unsigned int debut, unsigned int nbr)
+{
+    *this = erase(debut, nbr);
+}
+
 String String::substring(unsigned int debut, unsigned int fin) const
 {
     String s = substr(debut, fin-debut+1);

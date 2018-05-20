@@ -83,3 +83,10 @@ String& String::operator =(const char c[])
     String s = String(c);
     return s;
 }
+
+String& operator+(std::string const& str1, std::string const& str2)
+{
+    String somme = str1;
+    somme += str2;
+    return somme;
+}

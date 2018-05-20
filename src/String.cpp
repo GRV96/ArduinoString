@@ -90,3 +90,23 @@ String& operator+(std::string const& str1, std::string const& str2)
     somme += str2;
     return somme;
 }
+
+String& operator+(std::string const& str, const char c[])
+{
+    String nouvelle = c;
+    return str + nouvelle;
+}
+
+String& operator+(const char c[], std::string const& str)
+{
+    String nouvelle = c;
+    return nouvelle + str;
+}
+
+/*
+String& operator+(const char c1[], const char c2[])
+{
+    String str1 = c1;
+    String str2 = c2
+    return str1 + str2;
+} //*/

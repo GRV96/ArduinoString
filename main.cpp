@@ -48,7 +48,61 @@ int main()
     s.clear();
     cout << "s.clear(): " << s << "." << endl << endl;
 
-    //* Essai de new avec String*
+    /* Test toInt()
+    String strInt1 = "12345";
+    String strInt2 = "123foo";
+
+    cout << "12345 + 1 = " << strInt1.toInt() + 1 << endl;
+    cout << "123foo + 1 = " << strInt2.toInt() + 1 << endl;
+    //cout << "chaine + 1 = " << s.toInt() + 1 << endl; // Lance l'exception std::invalid_argument.
+    //*/
+
+    /* Test remove()
+    String chaineACouper = "anticonstitutionnellement";
+    String coupee1 = chaineACouper;
+    String coupee2 = chaineACouper;
+    coupee1.remove(3);
+    coupee2.remove(3, 4);
+
+    cout << coupee1 << " " << coupee2 << endl;
+    //*/
+
+    /* Test size
+    String chaineDeTaille = "taille";
+    cout << "Taille de \"taille\": " << chaineDeTaille.length() << endl;
+    //*/
+
+    /* Test compareTo()
+    String str1 = "affaire";
+    String str2 = "patente";
+
+    cout << "str1.compareTo(str2): " << str1.compareTo(str2) << endl;
+    cout << "str2.compareTo(str1): " << str2.compareTo(str1) << endl;
+    //*/
+
+    /* Test +=
+    String str1 = "affaire";
+    String str2 = "patente";
+
+    str2 += str1;
+    cout << str2 << endl;
+    //*/
+
+    //* Test +
+    String str1 = "affaire";
+    String str2 = "patente";
+
+    cout << "str1 + str2: " << str1 + str2 << endl;
+    // Pour vérifier que les chaînes originales sont inchangées
+    cout << "str1: " << str1 << endl;
+    cout << "str2: " << str2 << endl;
+
+    //cout << "\"essai\" + \"tentative\": " << "essai" + "tentative" << endl;
+    cout << str1 + "essai" << endl;
+    cout << "tentative" + str2 << endl;
+    //*/
+
+    /* Essai de new avec String*
     String* sp = new String("chaine");
     cout << "Pointeur de String: " << *sp << endl;
 

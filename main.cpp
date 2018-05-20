@@ -3,12 +3,13 @@
 #include <vector>
 
 #include "include\String.h"
+#include "testString.h"
 
 using namespace std;
 
 int main()
 {
-    /*
+    /* Essai avec std::string
     string str = "chaine";
 
     cout << "Test avec le string " << str << endl;
@@ -39,7 +40,7 @@ int main()
 
     cout << "Position du caractere 'i': " << s.indexOf('i') << endl;
 
-    cout << "Sous-chaine: " << aine << endl;
+    cout << "Sous-chaines: " << ain << " " << aine << endl;
 
     cout << "Position de la chaine \"ain\": " << s.indexOf("ain") << endl;
     cout << "Position de la chaine \"ain\": " << s.indexOf(ain) << endl;
@@ -88,7 +89,7 @@ int main()
     cout << str2 << endl;
     //*/
 
-    //* Test +
+    /* Test +
     String str1 = "affaire";
     String str2 = "patente";
     String somme = str1 + str2;
@@ -151,6 +152,28 @@ int main()
     cin >> a; // Pour arrêter le programme
 
     cout << a << endl;
+    //*/
+
+    //* Méthodes de test
+    caractereAPosition();
+
+    verifierEffacement();
+
+    comparerChaines();
+
+    positionCaractere();
+
+    positionChaine();
+
+    tailleChaine();
+
+    supprimerCaracteres();
+
+    extraireSousChaine();
+
+    transformerEnEntier();
+
+    allouerMemoireString();
     //*/
 
     return 0;

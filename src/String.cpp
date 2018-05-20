@@ -25,10 +25,9 @@ String::~String()
     //dtor
 }
 
-String String::charAt(unsigned int indice) const
+char String::charAt(unsigned int indice) const
 {
-    char c = at(indice);
-    return String(1, c);
+    return at(indice);
 }
 
 int String::compareTo(String const& str) const
@@ -51,14 +50,14 @@ int String::indexOf(String const& str, unsigned int indice) const
     return find(str, indice);
 }
 
-void String::remove(unsigned int debut, unsigned int nbr)
-{
-    *this = erase(debut, nbr);
-}
-
 unsigned int String::length() const
 {
     return size();
+}
+
+void String::remove(unsigned int debut, unsigned int nbr)
+{
+    *this = erase(debut, nbr);
 }
 
 String String::substring(unsigned int debut, unsigned int fin) const

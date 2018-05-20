@@ -69,6 +69,11 @@ String String::substring(unsigned int debut, unsigned int fin) const
 
 long int String::toInt() const
 {
+    /*
+    * Pour utiliser std::stoi(const string&  str)
+    * Settings -> Compiler -> Compiler settings -> Compiler Flags
+    * -> cocher "Have g++ follow the C++11 ISO C++ language standard [-std=c++11]"
+    */
     return std::stoi(*this);
 }
 
@@ -84,6 +89,7 @@ String& String::operator =(const char c[])
     return s;
 }
 
+/*
 String& operator+(std::string const& str1, std::string const& str2)
 {
     String somme = str1;
@@ -101,12 +107,20 @@ String& operator+(const char c[], std::string const& str)
 {
     String nouvelle = c;
     return nouvelle + str;
-}
+} //*/
 
 /*
-String& operator+(const char c1[], const char c2[])
+String& operator+(const char c1[], const char c2[]) const
 {
     String str1 = c1;
-    String str2 = c2
+    String str2 = c2;
+    return str1 + str2;
+} //*/
+
+/*
+String& String::operator+(const char c[]) const
+{
+    String str1 = *this;
+    String str2 = c;
     return str1 + str2;
 } //*/

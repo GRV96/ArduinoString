@@ -91,8 +91,9 @@ int main()
     //* Test +
     String str1 = "affaire";
     String str2 = "patente";
+    String somme = str1 + str2;
 
-    cout << "str1 + str2: " << str1 + str2 << endl;
+    cout << "str1 + str2: " << somme << endl;
     // Pour vérifier que les chaînes originales sont inchangées
     cout << "str1: " << str1 << endl;
     cout << "str2: " << str2 << endl;
@@ -107,7 +108,7 @@ int main()
     cout << "Pointeur de String: " << *sp << endl;
 
     delete sp;
-    cout << "Suppression du pointeur." << endl;
+    cout << "Suppression du pointeur avec delete." << endl;
 
     cout << "Pointeur de String: " << *sp << endl;
 

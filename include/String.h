@@ -29,6 +29,8 @@ class String : public std::string
 
         String& operator=(std::string const& str);
         String& operator=(const char c[]);
+
+        //String& operator+(const char c[]) const;
 };
 
 #endif // STRING_H

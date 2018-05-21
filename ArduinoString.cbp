@@ -35,8 +35,10 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/String.h" />
+		<Unit filename="include/testString.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/String.cpp" />
+		<Unit filename="src/testString.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

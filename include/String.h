@@ -12,6 +12,8 @@ class String : public std::string
         String(std::string const& str);
         String(unsigned int n, char c);
         String(const char c[]);
+        String(int nombre);
+        String(double nombre);
 
         // Destructeur
         virtual ~String();

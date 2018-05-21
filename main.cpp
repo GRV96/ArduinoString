@@ -49,6 +49,10 @@ int main()
     s.clear();
     cout << "s.clear(): " << s << "." << endl << endl;
 
+    //* Fonctions de test
+    toutTester();
+    //*/
+
     /* Test toInt()
     String strInt1 = "12345";
     String strInt2 = "123foo";
@@ -154,25 +158,7 @@ int main()
     cout << a << endl;
     //*/
 
-    //* Méthodes de test
-    caractereAPosition();
-
-    verifierEffacement();
-
-    comparerChaines();
-
-    positionCaractere();
-
-    positionChaine();
-
-    tailleChaine();
-
-    supprimerCaracteres();
-
-    extraireSousChaine();
-
-    transformerEnEntier();
-
+    /* L'assertion *sp != "mot" échoue après le test du vecteur.
     allouerMemoireString();
     //*/
 

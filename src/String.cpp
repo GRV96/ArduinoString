@@ -20,6 +20,16 @@ String::String(const char c[]): std::string(c)
     // Appelle le constructeur de std::string.
 }
 
+String::String(int nombre)
+{
+    *this = std::to_string(nombre);
+}
+
+String::String(double nombre)
+{
+    *this = std::to_string(nombre);
+}
+
 String::~String()
 {
     //dtor

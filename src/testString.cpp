@@ -2,6 +2,32 @@
 
 #include "testString.h"
 
+void toutTester()
+{
+    //constructeursAvecNombre();
+    caractereAPosition();
+    verifierEffacement();
+    comparerChaines();
+    positionCaractere();
+    positionChaine();
+    tailleChaine();
+    supprimerCaracteres();
+    extraireSousChaine();
+    transformerEnEntier();
+    concatenerAvecPlus();
+    concatenerAvecPlusEgal();
+    allocationMemoireString();
+}
+
+void constructeursAvecNombre()
+{
+    String n1 = String(17);
+    String n2 = String(23.1608);
+
+    assert(n1 == "17");
+    assert(n2 == "23.1608");
+}
+
 void caractereAPosition()
 {
     String s = "chaine";
@@ -87,13 +113,45 @@ void transformerEnEntier()
     assert(strInt2.toInt() == 123);
 }
 
-void allouerMemoireString()
+void concatenerAvecPlus()
 {
-    String* sp = new String("chaine");
-    assert(*sp == "chaine");
+    String str1 = "affaire";
+    String str2 = "patente";
+    String somme = str1 + str2;
+
+    assert(somme == "affairepatente");
+
+    // Pour vérifier que les chaînes originales sont inchangées
+    assert(str1 == "affaire");
+    assert(str2 == "patente");
+
+    assert(str1 + "essai" == "affaireessai");
+    assert("tentative" + str2 == "tentativepatente");
+
+    /* Opérandes invalides
+    assert("essai" + "tentative" == "essaitentative");
+    //*/
+}
+
+void concatenerAvecPlusEgal()
+{
+    String str1 = "affaire";
+    String str2 = "patente";
+
+    str2 += str1;
+    assert(str2 == "patenteaffaire");
+
+    // Pour vérifier que str1 est inchangée
+    assert(str1 == "affaire");
+}
+
+void allocationMemoireString()
+{
+    String* sp = new String("mot");
+    assert(*sp == "mot");
 
     delete sp;
-    assert(*sp != "chaine");
+    assert(*sp != "mot");
 
     sp = 0;
 }

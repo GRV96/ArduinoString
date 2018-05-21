@@ -3,6 +3,10 @@
 
 #include "String.h"
 
+void toutTester();
+
+void constructeursAvecNombre();
+
 void caractereAPosition();
 
 void verifierEffacement();
@@ -21,6 +25,10 @@ void extraireSousChaine();
 
 void transformerEnEntier();
 
-void allouerMemoireString();
+void concatenerAvecPlus();
+
+void concatenerAvecPlusEgal();
+
+void allocationMemoireString();
 
 #endif // TESTSTRING_H_INCLUDED

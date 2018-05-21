@@ -22,12 +22,16 @@ String::String(const char c[]): std::string(c)
 
 String::String(int nombre)
 {
-    *this = std::to_string(nombre);
+    std::string nbStr = std::to_string(nombre);
+    eliminerZeros(nbStr);
+    append(nbStr);
 }
 
 String::String(double nombre)
 {
-    *this = std::to_string(nombre);
+    std::string nbStr = std::to_string(nombre);
+    eliminerZeros(nbStr);
+    append(nbStr);
 }
 
 String::~String()
@@ -43,7 +47,9 @@ void String::concat(int nombre)
 void String::concat(double nombre)
 {
     std::string nbStr = std::to_string(nombre);
+    eliminerZeros(nbStr);
 
+    /*
     for(int i = nbStr.size()-1; i>=0; i--)
     {
         if(nbStr.at(i) == '0')
@@ -54,7 +60,7 @@ void String::concat(double nombre)
         {
             break;
         }
-    }
+    } //*/
 
     this->append(nbStr);
 }
@@ -118,6 +124,21 @@ long int String::toInt() const
     * -> cocher "Have g++ follow the C++11 ISO C++ language standard [-std=c++11]"
     */
     return std::stoi(*this);
+}
+
+void String::eliminerZeros(std::string& nbStr)
+{
+    for(int i = nbStr.size()-1; i>=0; i--)
+    {
+        if(nbStr.at(i) == '0')
+        {
+            nbStr.pop_back();
+        }
+        else
+        {
+            break;
+        }
+    }
 }
 
 String& String::operator =(std::string const& str)

@@ -49,6 +49,17 @@ int main()
     s.clear();
     cout << "s.clear(): " << s << "." << endl << endl;
 
+    String s3 = "double";
+    s3.concat(57.4132);
+
+    String s4 = "double";
+    s4.concat(-0.83716000000);
+
+    String s5 = "double";
+    s5.concat(9214.603781820575872085);
+
+    cout << s3 + " " + s4 + " " + s5 << endl;
+
     //* Fonctions de test
     toutTester();
     //*/

@@ -4,7 +4,7 @@
 
 void toutTester()
 {
-    //constructeursAvecNombre();
+    constructeursAvecNombre();
     caractereAPosition();
     verifierEffacement();
     comparerChaines();
@@ -77,13 +77,18 @@ void concatenerAvecConcat()
     s4.concat(-0.83716000000);
     assert(s4 == "double-0.83716");
 
-    String s5 = "chaine";
-    s5.concat("str");
-    assert(s5 == "chainestr");
+    String s5 = "double";
+    s5.concat(9214.603781820575872085);
+    assert(s5 == "double9214.603782");
 
-    String s6 = "mot";
-    s6.concat(s5);
-    assert(s6 == "motchainestr");
+    // Test avec des chaînes de caractères
+    String s6 = "chaine";
+    s6.concat("str");
+    assert(s6 == "chainestr");
+
+    String s7 = "mot";
+    s7.concat(s6);
+    assert(s7 == "motchainestr");
 }
 
 void positionCaractere()

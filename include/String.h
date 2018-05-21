@@ -35,6 +35,9 @@ class String : public std::string
 
         String& operator=(std::string const& str);
         String& operator=(const char c[]);
+
+    private:
+        void eliminerZeros(std::string& nbStr);
 };
 
 #endif // STRING_H

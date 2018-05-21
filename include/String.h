@@ -21,6 +21,10 @@ class String : public std::string
         // Méthodes à adapter
         char charAt(unsigned int indice) const;
         int compareTo(String const& str) const;
+        void concat(int nombre);
+        void concat(double nombre);
+        void concat(char* s);
+        void concat(std::string str);
         int indexOf(char c, unsigned int indice=0) const;
         int indexOf(const char* c, unsigned int indice=0) const;
         int indexOf(String const& str, unsigned int indice=0) const;
@@ -31,8 +35,6 @@ class String : public std::string
 
         String& operator=(std::string const& str);
         String& operator=(const char c[]);
-
-        //String& operator+(const char c[]) const;
 };
 
 #endif // STRING_H

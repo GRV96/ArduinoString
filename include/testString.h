@@ -13,6 +13,8 @@ void verifierEffacement();
 
 void comparerChaines();
 
+void concatenerAvecConcat();
+
 void positionCaractere();
 
 void positionChaine();

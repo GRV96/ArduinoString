@@ -8,6 +8,7 @@ void toutTester()
     caractereAPosition();
     verifierEffacement();
     comparerChaines();
+    concatenerAvecConcat();
     positionCaractere();
     positionChaine();
     tailleChaine();
@@ -54,6 +55,35 @@ void comparerChaines()
     assert(str1.compareTo(str2) < 0);
     assert(str1.compareTo(str1) == 0);
     assert(str2.compareTo(str1) > 0);
+}
+
+void concatenerAvecConcat()
+{
+    // Test avec int
+    String s1 = "int";
+    s1.concat(3);
+    assert(s1 == "int3");
+
+    String s2 = "int";
+    s2.concat(-12);
+    assert(s2 == "int-12");
+
+    // Test avec double
+    String s3 = "double";
+    s3.concat(57.4132);
+    assert(s3 == "double57.4132");
+
+    String s4 = "double";
+    s4.concat(-0.83716000000);
+    assert(s4 == "double-0.83716");
+
+    String s5 = "chaine";
+    s5.concat("str");
+    assert(s5 == "chainestr");
+
+    String s6 = "mot";
+    s6.concat(s5);
+    assert(s6 == "motchainestr");
 }
 
 void positionCaractere()

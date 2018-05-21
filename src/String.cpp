@@ -35,6 +35,40 @@ String::~String()
     //dtor
 }
 
+void String::concat(int nombre)
+{
+    this->append(std::to_string(nombre));
+}
+
+void String::concat(double nombre)
+{
+    std::string nbStr = std::to_string(nombre);
+
+    for(int i = nbStr.size()-1; i>=0; i--)
+    {
+        if(nbStr.at(i) == '0')
+        {
+            nbStr.pop_back();
+        }
+        else
+        {
+            break;
+        }
+    }
+
+    this->append(nbStr);
+}
+
+void String::concat(char* s)
+{
+    this->append(s);
+}
+
+void String::concat(std::string str)
+{
+    this->append(str);
+}
+
 char String::charAt(unsigned int indice) const
 {
     return at(indice);

@@ -153,7 +153,7 @@ String& String::operator =(const char c[])
     return s;
 }
 
-/*
+//*
 String& operator+(std::string const& str1, std::string const& str2)
 {
     String somme = str1;

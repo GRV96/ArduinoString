@@ -166,6 +166,8 @@ void concatenerAvecPlus()
     /* Opérandes invalides
     assert("essai" + "tentative" == "essaitentative");
     //*/
+
+    assert(String("cossin") + "machin" == "cossinmachin");
 }
 
 void concatenerAvecPlusEgal()

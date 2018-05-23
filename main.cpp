@@ -104,7 +104,7 @@ int main()
     cout << str2 << endl;
     //*/
 
-    /* Test +
+    //* Test +
     String str1 = "affaire";
     String str2 = "patente";
     String somme = str1 + str2;
@@ -117,6 +117,8 @@ int main()
     //cout << "\"essai\" + \"tentative\": " << "essai" + "tentative" << endl;
     cout << str1 + "essai" << endl;
     cout << "tentative" + str2 << endl;
+
+    cout << String("cossin") + "machin" << endl;
     //*/
 
     /* Essai de new avec String*

@@ -48,20 +48,6 @@ void String::concat(double nombre)
 {
     std::string nbStr = std::to_string(nombre);
     eliminerZeros(nbStr);
-
-    /*
-    for(int i = nbStr.size()-1; i>=0; i--)
-    {
-        if(nbStr.at(i) == '0')
-        {
-            nbStr.pop_back();
-        }
-        else
-        {
-            break;
-        }
-    } //*/
-
     this->append(nbStr);
 }
 
@@ -153,7 +139,7 @@ String& String::operator =(const char c[])
     return s;
 }
 
-//*
+/*
 String& operator+(std::string const& str1, std::string const& str2)
 {
     String somme = str1;

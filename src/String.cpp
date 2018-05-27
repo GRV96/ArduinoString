@@ -39,6 +39,16 @@ String::~String()
     //dtor
 }
 
+char String::charAt(unsigned int indice) const
+{
+    return at(indice);
+}
+
+int String::compareTo(String const& str) const
+{
+    return compare(str);
+}
+
 void String::concat(int nombre)
 {
     this->append(std::to_string(nombre));
@@ -59,16 +69,6 @@ void String::concat(char* s)
 void String::concat(std::string str)
 {
     this->append(str);
-}
-
-char String::charAt(unsigned int indice) const
-{
-    return at(indice);
-}
-
-int String::compareTo(String const& str) const
-{
-    return compare(str);
 }
 
 int String::indexOf(char c, unsigned int indice) const

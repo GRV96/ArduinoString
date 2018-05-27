@@ -61,7 +61,7 @@ void String::concat(double nombre)
     this->append(nbStr);
 }
 
-void String::concat(char* s)
+void String::concat(const char* s)
 {
     this->append(s);
 }

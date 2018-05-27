@@ -23,14 +23,14 @@ class String : public std::string
         int compareTo(String const& str) const;
         void concat(int nombre);
         void concat(double nombre);
-        void concat(char* s);
+        void concat(const char* s);
         void concat(std::string str);
         int indexOf(char c, unsigned int indice=0) const;
         int indexOf(const char* c, unsigned int indice=0) const;
         int indexOf(String const& str, unsigned int indice=0) const;
         unsigned int length() const;
         void remove(unsigned int debut, unsigned int nbr=npos);
-        String substring(unsigned int debut, unsigned int fin=-1) const;
+        String substring(unsigned int debut=0, unsigned int fin=npos) const;
         long int toInt() const;
 
         String& operator=(std::string const& str);

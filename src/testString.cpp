@@ -23,10 +23,12 @@ void toutTester()
 void constructeursAvecNombre()
 {
     String n1 = String(17);
-    String n2 = String(23.1608);
+    String n2 = String(720);
+    String n3 = String(23.1608);
 
     assert(n1 == "17");
-    assert(n2 == "23.1608");
+    assert(n2 == "720");
+    assert(n3 == "23.1608");
 }
 
 void caractereAPosition()

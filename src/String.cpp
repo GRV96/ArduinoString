@@ -23,7 +23,6 @@ String::String(const char c[]): std::string(c)
 String::String(int nombre)
 {
     std::string nbStr = std::to_string(nombre);
-    eliminerZeros(nbStr);
     append(nbStr);
 }
 

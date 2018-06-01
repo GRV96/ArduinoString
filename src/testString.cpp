@@ -136,7 +136,7 @@ void extraireSousChaine()
     String s = "anticonstitutionnellement";
 
     assert(s.substring(7) == "stitutionnellement");
-    assert(s.substring(7, 13) == "stituti");
+    assert(s.substring(7, 13) == "stitut");
 }
 
 void transformerEnEntier()

@@ -102,7 +102,7 @@ void String::remove(unsigned int debut, unsigned int nbr)
 
 String String::substring(unsigned int debut, unsigned int fin) const
 {
-    String s = substr(debut, fin-debut+1);
+    String s = substr(debut, fin-debut);
     return s;
 }
 

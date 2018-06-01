@@ -49,26 +49,30 @@ int String::compareTo(String const& str) const
     return compare(str);
 }
 
-void String::concat(int nombre)
+bool String::concat(int nombre)
 {
     this->append(std::to_string(nombre));
+    return true;
 }
 
-void String::concat(double nombre)
+bool String::concat(double nombre)
 {
     std::string nbStr = std::to_string(nombre);
     eliminerZeros(nbStr);
     this->append(nbStr);
+    return true;
 }
 
-void String::concat(const char* s)
+bool String::concat(const char* s)
 {
     this->append(s);
+    return true;
 }
 
-void String::concat(std::string str)
+bool String::concat(std::string str)
 {
     this->append(str);
+    return true;
 }
 
 int String::indexOf(char c, unsigned int indice) const

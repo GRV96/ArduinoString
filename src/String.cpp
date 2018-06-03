@@ -26,6 +26,12 @@ String::String(int nombre)
     append(nbStr);
 }
 
+String::String(unsigned int nombre)
+{
+    std::string nbStr = std::to_string(nombre);
+    append(nbStr);
+}
+
 String::String(double nombre)
 {
     std::string nbStr = std::to_string(nombre);

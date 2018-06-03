@@ -16,6 +16,7 @@ class String : public std::string
         String(unsigned int n, char c);
         String(const char c[]);
         String(int nombre);
+        String(unsigned int nombre);
         String(double nombre);
 
         // Destructeur

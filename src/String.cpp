@@ -22,14 +22,20 @@ String::String(const char c[]): std::string(c)
 
 String::String(int nombre)
 {
+    /*
     std::string nbStr = std::to_string(nombre);
     append(nbStr);
+    //*/
+    convertirNombre(nombre);
 }
 
 String::String(unsigned int nombre)
 {
+    /*
     std::string nbStr = std::to_string(nombre);
     append(nbStr);
+    //*/
+    convertirNombre(nombre);
 }
 
 String::String(double nombre)
@@ -121,13 +127,28 @@ long int String::toInt() const
     return std::stoi(*this);
 }
 
+template<typename T>
+void String::convertirNombre(T nombre)
+{
+    std::string nbStr = std::to_string(nombre);
+    append(nbStr);
+}
+
 void String::eliminerZeros(std::string& nbStr)
 {
-    for(int i = nbStr.size()-1; i>=0; i--)
+    int dernierIndice = nbStr.size()-1;
+
+    for(int i = dernierIndice; i>=0; i--)
     {
         if(nbStr.at(i) == '0')
         {
             nbStr.pop_back();
+
+            if(nbStr.at(i-1) == '.')
+            {
+                nbStr.pop_back();
+                break;
+            }
         }
         else
         {

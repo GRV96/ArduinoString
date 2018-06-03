@@ -31,12 +31,14 @@ void constructeursAvecNombre()
     String strn3(n3);
     String strn4(101);
     String strn5(840.193270);
+    String strn6(11.0);
 
     assert(strn1 == "17");
     assert(strn2 == "720");
     assert(strn3 == "23.1608");
     assert(strn4 == "101");
     assert(strn5 == "840.19327");
+    assert(strn6 == "11");
 }
 
 void caractereAPosition()

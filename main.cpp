@@ -45,10 +45,26 @@ int main()
     cout << "Position de la chaine \"ain\": " << s.indexOf("ain") << endl;
     cout << "Position de la chaine \"ain\": " << s.indexOf(ain) << endl;
 
-    // Pas besoin d'implémenter clear. Apparamment, n'existe pas dans Arduino.
+    // Pas besoin d'implémenter clear. Apparamment, cette méthode n'existe pas dans Arduino.
     s.clear();
     cout << "s.clear(): " << s << "." << endl << endl;
 
+    //* Fonctions de test
+    toutTester();
+    //*/
+
+    //* Test uint8_t
+    uint8_t octet = 0b11011010;
+    String chaineOctet(octet);
+    cout << chaineOctet << endl;
+
+    byte octet2 = 108;
+    String chaineOctet2 = "";
+    chaineOctet2.concat(octet2);
+    cout << chaineOctet2 << endl;
+    //*/
+
+    /* Test concat
     String s3 = "double";
     s3.concat(57.4132);
 
@@ -59,9 +75,6 @@ int main()
     s5.concat(9214.603781820575872085);
 
     cout << s3 + " " + s4 + " " + s5 << endl;
-
-    //* Fonctions de test
-    toutTester();
     //*/
 
     /* Test toInt()
@@ -104,7 +117,7 @@ int main()
     cout << str2 << endl;
     //*/
 
-    //* Test +
+    /* Test +
     String str1 = "affaire";
     String str2 = "patente";
     String somme = str1 + str2;

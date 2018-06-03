@@ -22,19 +22,11 @@ String::String(const char c[]): std::string(c)
 
 String::String(int nombre)
 {
-    /*
-    std::string nbStr = std::to_string(nombre);
-    append(nbStr);
-    //*/
     convertirNombre(nombre);
 }
 
 String::String(unsigned int nombre)
 {
-    /*
-    std::string nbStr = std::to_string(nombre);
-    append(nbStr);
-    //*/
     convertirNombre(nombre);
 }
 

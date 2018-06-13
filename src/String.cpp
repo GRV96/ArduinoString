@@ -129,14 +129,17 @@ void String::convertirNombre(T nombre)
 void String::eliminerZeros(std::string& nbStr)
 {
     int dernierIndice = nbStr.size()-1;
+    char caracActuel;
 
     for(int i = dernierIndice; i>=0; i--)
     {
-        if(nbStr.at(i) == '0')
+        caracActuel = nbStr.at(i);
+
+        if(caracActuel == '0')
         {
             nbStr.pop_back();
         }
-        else if(nbStr.at(i) == '.')
+        else if(caracActuel == '.')
         {
             nbStr.pop_back();
             break;

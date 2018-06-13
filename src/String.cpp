@@ -135,12 +135,11 @@ void String::eliminerZeros(std::string& nbStr)
         if(nbStr.at(i) == '0')
         {
             nbStr.pop_back();
-
-            if(nbStr.at(i-1) == '.')
-            {
-                nbStr.pop_back();
-                break;
-            }
+        }
+        else if(nbStr.at(i) == '.')
+        {
+            nbStr.pop_back();
+            break;
         }
         else
         {

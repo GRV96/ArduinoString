@@ -32,6 +32,7 @@ void constructeursAvecNombre()
     String strn4(101);
     String strn5(840.193270);
     String strn6(11.0);
+    String strn7(30.00);
 
     assert(strn1 == "17");
     assert(strn2 == "720");
@@ -39,6 +40,7 @@ void constructeursAvecNombre()
     assert(strn4 == "101");
     assert(strn5 == "840.19327");
     assert(strn6 == "11");
+    assert(strn7 == "30");
 }
 
 void caractereAPosition()
